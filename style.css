@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 50px;
+}
+
+.flag {
+  width: 300px;
+  height: 200px;
+  margin: 20px 0;
+}
+
+
+/* Ukraine ==================*/
+
+.ukraine:before {
+  content: '';
+  display: block;
+  height: 50%;
+  background-color: blue;
+}
+
+.ukraine::after {
+  content: '';
+  display: block;
+  height: 50%;
+  background-color: yellow;
+}
+
+
+/* Japan ==================*/
+
+.japan {
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.japan::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+
+/* Iceland ==================*/
+
+.iceland {
+  background-color: darkblue;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iceland::before {
+  content: '';
+  display: block;
+  background-color: white;
+  height: 40px;
+  width: 100%;
+}
+
+.iceland::after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  display: block;
+  background-color: white;
+  height: 100%;
+  width: 40px;
+  transform: rotate(180deg);
+  left: 70px;
+}
+
+.iceland__cross_red::before {
+  position: absolute;
+  z-index: 3;
+  top: calc(50% - (25px/2));
+  left: 0;
+  content: '';
+  display: inline-block;
+  background-color: red;
+  height: 25px;
+  width: 300px;
+}
+
+.iceland__cross_red::after {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: calc(70px + (40px/2 - 25px/2));
+  content: '';
+  display: inline-block;
+  background-color: red;
+  height: 200px;
+  width: 25px;
+  transform: rotate(180deg);
+}
+
+
+/* Czech ==================*/
+
+.czech {
+  position: relative;
+}
+
+.czech:before {
+  content: '';
+  display: block;
+  height: 50%;
+  background-color: aliceblue;
+}
+
+.czech::after {
+  content: '';
+  display: block;
+  height: 50%;
+  background-color: red;
+}
+
+.czech__triangle {
+  position: absolute;
+  transform: rotate(90deg);
+  left: calc(-100px/2);
+  top: calc(50%/2);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 100px 100px;
+  border-color: transparent transparent darkblue transparent;
+}
